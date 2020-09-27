@@ -10,9 +10,9 @@ if __name__ == '__main__':
     client = MPRester(args.key)
 
     criteria= {
-        "elements": {
-            "$all": ["Se"]
-        },
+        # "elements": {
+        #     "$all": ["Se"]
+        # },
         "e_above_hull": 0.0
     }
 

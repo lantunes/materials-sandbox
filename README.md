@@ -52,7 +52,7 @@ python plot_atom_vectors_fm_tsne2.py --model out/all_stable_bandgap_dim20.fm.ctx
 ```
 ![fig3](resources/all_stable_bandgap_grave_continuous.png)
 
-The labels in the two plots above are color-coded by electronegativity:
+The labels for each point in the two plots above are color-coded by electronegativity:
 ```
 >= 3.0: red
 >= 2.0 and < 3.0: orange

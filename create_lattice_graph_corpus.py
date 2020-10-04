@@ -2,7 +2,7 @@ import pandas as pd
 from pymatgen.analysis.graphs import StructureGraph
 from pymatgen.analysis.local_env import CrystalNN
 import networkx as nx
-from node2vec_graph import Node2VecGraph
+from grave import Node2VecGraph
 
 
 if __name__ == '__main__':
@@ -15,7 +15,6 @@ if __name__ == '__main__':
 
             print(struct.formula)
 
-            # struct = struct * 2
             struct_graph = StructureGraph.with_local_env_strategy(struct, CrystalNN())
             labels = {i: spec.name for i, spec in enumerate(struct.species)}
             G = nx.Graph(struct_graph.graph)

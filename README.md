@@ -37,6 +37,8 @@ python plot_atom_vectors_fm_tsne.py --model out/all_stable_bandgap_dim20.fm.ctx1
 ```
 ![fig2](resources/all_stable_bandgap_grave_ranges.png)
 
+The black points in the plot above (e.g. labelled "<1.5") represent the learned embeddings for the electronegativity ranges.
+
 ### Single Continuous Electronegativity Feature:
 
 Create the training set:

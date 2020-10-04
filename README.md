@@ -51,3 +51,11 @@ python build_fm_model.py
 python plot_atom_vectors_fm_tsne2.py --model out/all_stable_bandgap_dim20.fm.ctx10_add_cont.model --iterations 5000 --perplexity 10 --learning-rate 10
 ```
 ![fig3](resources/all_stable_bandgap_grave_continuous.png)
+
+The labels in the two plots above are color-coded by electronegativity:
+```
+>= 3.0: red
+>= 2.0 and < 3.0: orange
+>= 1.5 and < 2.0: lightblue
+< 1.5: blue
+```

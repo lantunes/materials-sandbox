@@ -43,3 +43,20 @@ def build_label_color_map():
                 color = "blue"
             label_color_map[atom] = color
     return label_color_map
+
+
+def build_marker_size_map():
+    marker_size_map = {}
+    with open("resources/all_stable_bandgap_atomic_radii.csv") as f:
+        for line in f.readlines():
+            atom, radius = line.strip().split(",")
+            val = float(radius)
+            size = 4
+            if val >= 2.0:
+                size = 32
+            elif 1.5 <= val < 2.0:
+                size = 16
+            elif 1.0 <= val < 1.5:
+                size = 8
+            marker_size_map[atom] = 3*size
+    return marker_size_map

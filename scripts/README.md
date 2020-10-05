@@ -15,14 +15,14 @@ python pca_mean_vectors.py
 
 The following plot is the result:
 
-![fig1](../resources/pca_mean_vector_all.png)
+<img alt="" src="../resources/pca_mean_vector_all.png" width="500">
 
 Each point represents a compound, colored according to its band gap value, with darker points representing a lower 
 value. About half of the compounds have a band gap value of 0.
 
 The following plot is the same as above, except that the compounds where the band gap is exactly 0 have been excluded:
 
-![fig1](../resources/pca_mean_vector_nonzero.png)
+<img alt="" src="../resources/pca_mean_vector_nonzero.png" width="500">
 
 For each of the plots above, the GraVe embeddings that incorporate a continuous electronegativity feature were used to 
 represent an atom in a compound.

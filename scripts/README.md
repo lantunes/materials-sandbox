@@ -10,19 +10,23 @@ It is interesting to ask if there is a relationship between this kind of represe
 gap value. The following command will compute the mean atom vectors for each of the ~33,000 compounds in the 
 `out/all_stable_bandgap.pkl` dataset, perform PCA on them, and plot the first two components against eachother:
 ```
-python pca_mean_vectors.py
+python pca_mean_atom_vectors.py
 ```
 
-The following plot is the result:
+The following plots are the result:
 
-<img alt="" src="../resources/pca_mean_vector_all.png" width="500">
+<img alt="" src="../resources/pca_mean_atom_vectors.png" width="800">
 
 Each point represents a compound, colored according to its band gap value, with darker points representing a lower 
-value. About half of the compounds have a band gap value of 0.
+value. The plot on the right is the same as the one on the left, except that the compounds where the band gap is 
+exactly 0 have been excluded, as about half of the compounds have a band gap value of 0.
 
-The following plot is the same as above, except that the compounds where the band gap is exactly 0 have been excluded:
-
-<img alt="" src="../resources/pca_mean_vector_nonzero.png" width="500">
-
-For each of the plots above, the GraVe embeddings that incorporate a continuous electronegativity feature were used to 
+For the plots above, the GraVe embeddings that incorporate a continuous electronegativity feature were used to 
 represent an atom in a compound.
+
+For comparison, random vectors were assigned to the elements of the dataset, and the same procedure was carried out:
+```
+python pca_mean_random_vectors.py
+```
+
+<img alt="" src="../resources/pca_mean_random_vectors.png" width="800">

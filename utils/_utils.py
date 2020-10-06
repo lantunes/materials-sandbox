@@ -60,3 +60,20 @@ def build_marker_size_map():
                 size = 8
             marker_size_map[atom] = 3*size
     return marker_size_map
+
+
+def color_by_band_gap(bg):
+    if bg < 0.1:
+        return "#0515ff"
+    if 0.1 <= bg < 1.0:
+        return "#2e3bff"
+    if 1.0 <= bg < 2.0:
+        return "#4d58ff"
+    if 2.0 <= bg < 3.0:
+        return "#6670ff"
+    if 3.0 <= bg < 4.0:
+        return "#848cfa"
+    if 4.0 <= bg <= 5.0:
+        return "#a3a9ff"
+    if bg > 5.0:
+        return "#c2c6ff"

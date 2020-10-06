@@ -15,7 +15,7 @@ python pca_mean_atom_vectors.py
 
 The following plots are the result:
 
-<img alt="" src="../resources/pca_mean_atom_vectors.png" width="800">
+<img alt="" src="../resources/pca_mean_atom_vectors.png">
 
 Each point represents a compound, colored according to its band gap value, with darker points representing a lower 
 value. The plot on the right is the same as the one on the left, except that the compounds where the band gap is 
@@ -29,4 +29,4 @@ For comparison, random vectors were assigned to the elements of the dataset, and
 python pca_mean_random_vectors.py
 ```
 
-<img alt="" src="../resources/pca_mean_random_vectors.png" width="800">
+<img alt="" src="../resources/pca_mean_random_vectors.png">

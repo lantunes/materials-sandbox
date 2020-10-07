@@ -66,7 +66,7 @@ The values in parentheses are the scores for a dataset in which the examples wit
 
 <i><sup>1</sup> embeddings jointly trained with a single, continuous electronegativity feature</i> 
 
-<i><sup>2</sup> embeddings jointly trained with electronegativity range binary features
+<i><sup>2</sup> embeddings jointly trained with electronegativity range binary features</i>
 
 <i><sup>3</sup> embeddings jointly trained with electronegativity range binary features, and 
 each atom vector was concatenated with its corresponding electronegativity range vector</i>
@@ -90,7 +90,7 @@ One-hot                  | 200 | 0.810 ± 0.0152               |
 
 <i><sup>1</sup> embeddings jointly trained with a single, continuous electronegativity feature</i>
 
-<i><sup>2</sup> embeddings jointly trained with electronegativity range binary features
+<i><sup>2</sup> embeddings jointly trained with electronegativity range binary features</i>
 
 <i><sup>3</sup> embeddings jointly trained with electronegativity range binary features, and
 each atom vector was concatenated with its corresponding electronegativity range vector</i>

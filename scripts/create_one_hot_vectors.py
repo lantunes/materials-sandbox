@@ -1,5 +1,5 @@
 from grave import FactorizationMachine
-from utils import RandomVectors
+from utils import OneHotVectors
 
 
 if __name__ == '__main__':
@@ -9,6 +9,6 @@ if __name__ == '__main__':
 
     elems = list(fm.dictionary.keys())
 
-    rv = RandomVectors(elems=elems, dim=20, mean=0, std=1)
+    ohv = OneHotVectors(elems=elems)
 
-    rv.save("../out/all_stable_bandgap_dim20.random.model")
+    ohv.save("all_stable_bandgap_dim20.one_hot.model")

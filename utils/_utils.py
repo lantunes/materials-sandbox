@@ -77,3 +77,20 @@ def color_by_band_gap(bg):
         return "#a3a9ff"
     if bg > 5.0:
         return "#c2c6ff"
+
+
+def get_label_by_band_gap(bg):
+    if bg < 0.1:
+        return "A"
+    if 0.1 <= bg < 1.0:
+        return "B"
+    if 1.0 <= bg < 2.0:
+        return "C"
+    if 2.0 <= bg < 3.0:
+        return "D"
+    if 3.0 <= bg < 4.0:
+        return "E"
+    if 4.0 <= bg <= 5.0:
+        return "F"
+    if bg > 5.0:
+        return "G"

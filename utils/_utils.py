@@ -26,9 +26,9 @@ def color_by_label(label):
     return "lightgray"
 
 
-def build_label_color_map():
+def build_label_color_map(resources_path="resources"):
     label_color_map = {}
-    with open("resources/all_stable_bandgap_electronegativities.csv") as f:
+    with open("%s/all_stable_bandgap_electronegativities.csv" % resources_path) as f:
         for line in f.readlines():
             atom, elec = line.strip().split(",")
             val = float(elec)
@@ -45,9 +45,9 @@ def build_label_color_map():
     return label_color_map
 
 
-def build_marker_size_map():
+def build_marker_size_map(resources_path="resources"):
     marker_size_map = {}
-    with open("resources/all_stable_bandgap_atomic_radii.csv") as f:
+    with open("%s/all_stable_bandgap_atomic_radii.csv" % resources_path) as f:
         for line in f.readlines():
             atom, radius = line.strip().split(",")
             val = float(radius)
@@ -94,3 +94,12 @@ def get_label_by_band_gap(bg):
         return "F"
     if bg > 5.0:
         return "G"
+
+
+def build_electronegativity_map(resources_path="resources"):
+    m = {}
+    with open("%s/all_stable_bandgap_electronegativities.csv" % resources_path) as f:
+        for line in f.readlines():
+            element, electronegativity = line.strip().split(",")
+            m[element] = float(electronegativity)
+    return m

@@ -52,6 +52,9 @@ if __name__ == '__main__':
     # pool = np.mean
     pool = np.max
 
+    exclude_zero = False
+    # exclude_zero = True
+
     borep_dim = 200
 
     W = np.random.uniform(low=-1/np.sqrt(dim), high=1/np.sqrt(dim), size=(borep_dim, dim))
@@ -62,7 +65,8 @@ if __name__ == '__main__':
         struct = df['structure'][i]
         band_gap = df['band_gap'][i]
 
-        # if band_gap == 0.0: continue
+        if band_gap == 0.0 and exclude_zero:
+            continue
 
         vectors = []
         for element in struct.species:

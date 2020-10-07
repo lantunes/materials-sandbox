@@ -13,6 +13,8 @@ if __name__ == '__main__':
 
     df = pd.read_pickle("../out/all_stable_bandgap.pkl")
 
+    exclude_zero = False
+
     X = []
     color_map = []
     band_gaps = []
@@ -20,7 +22,8 @@ if __name__ == '__main__':
         struct = df['structure'][i]
         band_gap = df['band_gap'][i]
 
-        # if band_gap == 0.0: continue
+        if band_gap == 0.0 and exclude_zero:
+            continue
 
         vectors = []
         for element in struct.species:

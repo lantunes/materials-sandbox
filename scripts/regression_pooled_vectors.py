@@ -35,13 +35,17 @@ if __name__ == '__main__':
     # pool = np.mean
     pool = np.max
 
+    exclude_zero = False
+    # exclude_zero = True
+
     X = []
     y = []
     for i in range(len(df['structure'])):
         struct = df['structure'][i]
         band_gap = df['band_gap'][i]
 
-        # if band_gap == 0.0: continue
+        if band_gap == 0.0 and exclude_zero:
+            continue
 
         vectors = []
         for element in struct.species:

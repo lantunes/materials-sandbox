@@ -42,7 +42,8 @@ Mean Pooling:
 Atom Vectors             | Dim |  Random Forest, R<sup>2</sup>   | MLP, R<sup>2</sup> |
 -------------------------|----:|--------------------------------:|-------------------:|   
 GraVe<i><sup>1</sup></i> | 20  | 0.693 ± 0.0148 (0.559 ± 0.0216) | 0.630 ± 0.0183     |
-GraVe<i><sup>2</sup></i> | 40  | 0.779 ± 0.0155 (0.677 ± 0.0205) | 0.701 ± 0.0160     |
+GraVe<i><sup>2</sup></i> | 20  | 0.750 ± 0.0195 (0.640 ± 0.0289) | 0.659 ± 0.0232     |
+GraVe<i><sup>3</sup></i> | 40  | 0.779 ± 0.0155 (0.677 ± 0.0205) | 0.701 ± 0.0160     |
 GloVe                    | 20  | 0.705 ± 0.0122 (0.577 ± 0.0208) | 0.590 ± 0.0176     |
 Random                   | 20  | 0.697 ± 0.0118 (0.561 ± 0.0186) | 0.700 ± 0.0141     |                         
 One-hot                  | 89  | 0.849 ± 0.0148 (0.775 ± 0.0270) | 0.883 ± 0.0158     |
@@ -52,7 +53,8 @@ Max Pooling:
 Atom Vectors             | Dim |  Random Forest, R<sup>2</sup>   | MLP, R<sup>2</sup> | 
 -------------------------|----:|--------------------------------:|-------------------:|   
 GraVe<i><sup>1</sup></i> | 20  | 0.796 ± 0.0155 (0.701 ± 0.0176) | 0.691 ± 0.0166     |
-GraVe<i><sup>2</sup></i> | 40  | 0.815 ± 0.0116 (0.736 ± 0.0114) | 0.695 ± 0.0171     |
+GraVe<i><sup>2</sup></i> | 20  | 0.807 ± 0.0124 (0.729 ± 0.0158) | 0.675 ± 0.0159     |
+GraVe<i><sup>3</sup></i> | 40  | 0.815 ± 0.0116 (0.736 ± 0.0114) | 0.695 ± 0.0171     |
 GloVe                    | 20  | 0.798 ± 0.0120 (0.708 ± 0.0118) | 0.588 ± 0.0175     |
 Random                   | 20  | 0.774 ± 0.0156 (0.673 ± 0.0210) | 0.602 ± 0.0131     |                    
 One-hot                  | 89  | 0.753 ± 0.0160 (0.641 ± 0.0290) | 0.825 ± 0.0155     |
@@ -64,7 +66,9 @@ The values in parentheses are the scores for a dataset in which the examples wit
 
 <i><sup>1</sup> embeddings jointly trained with a single, continuous electronegativity feature</i> 
 
-<i><sup>2</sup> embeddings jointly trained with electronegativity range binary features; 
+<i><sup>2</sup> embeddings jointly trained with electronegativity range binary features
+
+<i><sup>3</sup> embeddings jointly trained with electronegativity range binary features, and 
 each atom vector was concatenated with its corresponding electronegativity range vector</i>
 
 ### Regression with Bag of Random Embedding Projections
@@ -78,12 +82,15 @@ Max Pooling:
 Atom Vectors             | Dim | Random Forest, R<sup>2</sup> | 
 -------------------------|----:|-----------------------------:|   
 GraVe<i><sup>1</sup></i> | 200 | 0.827 ± 0.0183               |
-GraVe<i><sup>2</sup></i> | 200 | 0.839 ± 0.0113               |
+GraVe<i><sup>2</sup></i> | 200 | 0.825 ± 0.0136               |
+GraVe<i><sup>3</sup></i> | 200 | 0.839 ± 0.0113               |
 GloVe                    | 200 | 0.828 ± 0.0105               |
 Random                   | 200 | 0.805 ± 0.0149               |
 One-hot                  | 200 | 0.810 ± 0.0152               |
 
 <i><sup>1</sup> embeddings jointly trained with a single, continuous electronegativity feature</i>
 
-<i><sup>2</sup> embeddings jointly trained with electronegativity range binary features; 
+<i><sup>2</sup> embeddings jointly trained with electronegativity range binary features
+
+<i><sup>3</sup> embeddings jointly trained with electronegativity range binary features, and
 each atom vector was concatenated with its corresponding electronegativity range vector</i>

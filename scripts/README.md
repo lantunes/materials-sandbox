@@ -83,6 +83,8 @@ projection matrix, and `e_i` is the i'th atom vector in the compound.
 
 Max Pooling:
 
+
+
 |Atom Vectors             | In Dim     | Out Dim | Random Forest, R<sup>2</sup> | 
 |-------------------------|---------- :|--------:|-----------------------------:|   
 |GraVe<i><sup>1</sup></i> | 20         | 200     | 0.827 ± 0.0183               |
@@ -93,6 +95,8 @@ Max Pooling:
 |GloVe                    | 20         | 200     | 0.828 ± 0.0105               |
 |Random                   | 20         | 200     | 0.805 ± 0.0149               |
 |One-hot                  | 89         | 200     | 0.810 ± 0.0152               |
+
+
 
 <i><sup>1</sup> embeddings jointly trained with a single, continuous electronegativity feature</i>
 

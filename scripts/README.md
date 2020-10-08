@@ -83,20 +83,16 @@ projection matrix, and `e_i` is the i'th atom vector in the compound.
 
 Max Pooling:
 
-
-
-|Atom Vectors             | In Dim     | Out Dim | Random Forest, R<sup>2</sup> | 
-|-------------------------|---------- :|--------:|-----------------------------:|   
-|GraVe<i><sup>1</sup></i> | 20         | 200     | 0.827 ± 0.0183               |
-|GraVe<i><sup>2</sup></i> | 20         | 200     | 0.825 ± 0.0136               |
-|GraVe<i><sup>3</sup></i> | 40 (20+20) | 200     | 0.839 ± 0.0113               |
-|GraVe<i><sup>3</sup></i> | 178 (89+89)| 200     | 0.836 ± 0.0107               |
-|GraVe<i><sup>3</sup></i> | 178 (89+89)| 500     | 0.841 ± 0.0111               |
-|GloVe                    | 20         | 200     | 0.828 ± 0.0105               |
-|Random                   | 20         | 200     | 0.805 ± 0.0149               |
+|Atom Vectors  | In Dim | Out Dim | Random Forest, R<sup>2</sup> |
+|---|---|---|---|---|
+|GraVe<i><sup>1</sup></i> | 20         | 200     | 0.827 ± 0.0183               |  
+|GraVe<i><sup>2</sup></i> | 20         | 200     | 0.825 ± 0.0136               |  
+|GraVe<i><sup>3</sup></i> | 40 (20+20) | 200     | 0.839 ± 0.0113               |  
+|GraVe<i><sup>3</sup></i> | 178 (89+89)| 200     | 0.836 ± 0.0107               |  
+|GraVe<i><sup>3</sup></i> | 178 (89+89)| 500     | 0.841 ± 0.0111               |  
+|GloVe                    | 20         | 200     | 0.828 ± 0.0105               |  
+|Random                   | 20         | 200     | 0.805 ± 0.0149               |  
 |One-hot                  | 89         | 200     | 0.810 ± 0.0152               |
-
-
 
 <i><sup>1</sup> embeddings jointly trained with a single, continuous electronegativity feature</i>
 

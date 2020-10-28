@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from utils import RandomVectors, OneHotVectors
+from utils import RandomVectors, OneHotVectors, OrbitalDescriptors
 from grave import FactorizationMachine
 from sklearn.linear_model import LinearRegression
 from glove import Glove
@@ -17,6 +17,10 @@ if __name__ == '__main__':
     model = RandomVectors.load("../out/all_stable_bandgap_dim20.random.model")
     embeddings = model.vectors
     converter = lambda x: x
+
+    # model = OrbitalDescriptors(valence=True)
+    # embeddings = model.vectors
+    # converter = lambda x: x
 
     # model = Glove.load("../out/all_stable_bandgap_dim20.glove.model")
     # embeddings = model.word_vectors
@@ -54,15 +58,18 @@ if __name__ == '__main__':
         y.append(band_gap)
 
     cv_results = cross_validate(regression(**args), X, y, cv=10, return_estimator=True,
-                                scoring=('r2', 'neg_root_mean_squared_error'))
+                                scoring=('r2', 'neg_root_mean_squared_error', 'neg_mean_absolute_error'))
     # the r2 score is the coefficient of determination, R^2, of the prediction
     print(cv_results['test_r2'])
     print(cv_results['test_neg_root_mean_squared_error'])
+    print(cv_results['test_neg_mean_absolute_error'])
 
     print("mean fold r2 score: %s" % np.mean(cv_results['test_r2']))
     print("std fold r2 score: %s" % np.std(cv_results['test_r2']))
     print("mean fold neg_root_mean_squared_error score: %s" % np.mean(cv_results['test_neg_root_mean_squared_error']))
     print("std fold neg_root_mean_squared_error score: %s" % np.std(cv_results['test_neg_root_mean_squared_error']))
+    print("mean fold neg_mean_absolute_error score: %s" % np.mean(cv_results['test_neg_mean_absolute_error']))
+    print("std fold neg_mean_absolute_error score: %s" % np.std(cv_results['test_neg_mean_absolute_error']))
 
     # there is a trained estimator for each fold
     # estimator = cv_results['estimator'][0]

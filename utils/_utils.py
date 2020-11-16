@@ -103,3 +103,11 @@ def build_electronegativity_map(resources_path="resources"):
             element, electronegativity = line.strip().split(",")
             m[element] = float(electronegativity)
     return m
+
+
+def build_transition_metal_list(resources_path="resources"):
+    tm = []
+    with open("%s/transition_metals.txt" % resources_path) as f:
+        for line in f.readlines():
+            tm.append(line.strip())
+    return tm

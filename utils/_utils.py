@@ -111,3 +111,11 @@ def build_transition_metal_list(resources_path="resources"):
         for line in f.readlines():
             tm.append(line.strip())
     return tm
+
+
+def build_transition_metal_minus_list(resources_path="resources"):
+    tm = []
+    with open("%s/transition_metals-minus.txt" % resources_path) as f:
+        for line in f.readlines():
+            tm.append(line.strip())
+    return tm

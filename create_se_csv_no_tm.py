@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from utils import build_transition_metal_list
+from utils import build_transition_metal_minus_list
 
 if __name__ == '__main__':
     df = pd.read_pickle("out/all_selenium_2020-11-05.pkl")
@@ -12,7 +12,7 @@ if __name__ == '__main__':
     tot_num_atoms = []
     num_atoms_dist = {"1<=x<10": 0, "10<=x<20": 0, "20<=x<40": 0, "x>=40": 0}
 
-    tm = build_transition_metal_list()
+    tm = build_transition_metal_minus_list()
 
     with open("all_se_no_tm.csv", "wt") as f:
         f.write("pretty_formula,unit_cell_formula,num_atoms_in_unit_cell\n")
